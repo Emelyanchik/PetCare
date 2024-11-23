@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply antialiased text-gray-900 bg-gray-50;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-6 py-2 rounded-full font-semibold transition-all duration-200 disabled:opacity-50;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-blue-400 to-pink-400 text-white hover:opacity-90 disabled:hover:opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-gray-600 border-2 border-gray-200 hover:bg-gray-50;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/30 backdrop-blur-lg;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+.neumorphic {
+  box-shadow: 
+    20px 20px 60px #bebebe,
+    -20px -20px 60px #ffffff;
+}
